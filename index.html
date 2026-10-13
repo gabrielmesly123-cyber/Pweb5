@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration and Email Forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <section class="exercise-block">
+        <div class="registration-panel">
+          <h2>REGISTRATION FORM</h2>
+          <form id="registrationForm" novalidate>
+            <label for="fullName">Name:</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" />
+
+            <label for="address">Address:</label>
+            <input id="address" name="address" type="text" placeholder="Enter your address" />
+
+            <label for="email">E-mail Address:</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" />
+
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" placeholder="Password" />
+
+            <label for="course">Select Your Course:</label>
+            <select id="course" name="course">
+              <option value="">Select Course</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Information System">Information System</option>
+              <option value="Psychology">Psychology</option>
+              <option value="Business">Business</option>
+            </select>
+
+            <label for="college">College Name:</label>
+            <input id="college" name="college" type="text" placeholder="College Name" />
+
+            <div class="checkbox-row">
+              <input id="agreement" name="agreement" type="checkbox" />
+              <label for="agreement">I agree to the above information</label>
+            </div>
+
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="exercise-block email-block">
+        <div class="email-panel">
+          <h2>Email Validation Form</h2>
+          <form id="emailValidationForm" novalidate>
+            <label for="emailInput">Enter your email:</label>
+            <input id="emailInput" type="text" placeholder="example@domain.com" />
+            <button type="submit">Submit</button>
+          </form>
+          <p id="emailMessage" class="message" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="exercise-block postcode-block">
+        <div class="postcode-panel">
+          <div class="postcode-header">Kode Pos Indonesia</div>
+          <div class="postcode-form">
+            <div class="field-row">
+              <label for="provinsi">Provinsi</label>
+              <select id="provinsi">
+                <option value="">Pilih Provinsi</option>
+              </select>
+            </div>
+
+            <div class="field-row">
+              <label for="kota">Kota/Kabupaten</label>
+              <select id="kota">
+                <option value="">Pilih Kota/Kabupaten</option>
+              </select>
+            </div>
+
+            <div class="field-row">
+              <label for="kecamatan">Kecamatan</label>
+              <select id="kecamatan">
+                <option value="">Pilih Kecamatan</option>
+              </select>
+            </div>
+
+            <div class="field-row code-row">
+              <label for="kodepos">Kode Pos</label>
+              <input id="kodepos" type="text" value="" readonly />
+              <button type="button" id="searchPostalCode">Cari</button>
+            </div>
+          </div>
+
+          <div class="postcode-result" id="postcodeResult">
+            <p>Hasil pencarian kode pos akan muncul di sini.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
